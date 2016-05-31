@@ -27,14 +27,16 @@ public class Controller implements Initializable {
     ObservableList<Contact> contacts = FXCollections.observableArrayList();
 
     public void addContact() {
-        Contact contact = new Contact(text1.getText(), text2.getText(), text3.getText());
-        contacts.add(contact);
-        text1.setText("");
-        text2.setText("");
-        text3.setText("");
-        text1.clear();
-        text2.clear();
-        text3.clear();
+        try {
+            Contact contact = new Contact(text1.getText(), text2.getText(), text3.getText());
+            contacts.add(contact);
+            text1.setText("");
+            text2.setText("");
+            text3.setText("");
+            text1.clear();
+            text2.clear();
+            text3.clear();
+        } catch (Exception e) {}
     }
 
     public void removeContact() {
