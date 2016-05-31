@@ -14,6 +14,10 @@ public class Contact {
         this.number = number;
     }
 
+    public Contact(String text) {
+
+    }
+
     @Override
     public String toString() {
         return "Contact{" +
