@@ -13,7 +13,13 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     @FXML
-    TextField text;
+    TextField text1;
+
+    @FXML
+    TextField text2;
+
+    @FXML
+    TextField text3;
 
     @FXML
     ListView list;
@@ -21,10 +27,14 @@ public class Controller implements Initializable {
     ObservableList<Contact> contacts = FXCollections.observableArrayList();
 
     public void addContact() {
-        Contact contact = new Contact(text.getText());
+        Contact contact = new Contact(text1.getText(), text2.getText(), text3.getText());
         contacts.add(contact);
-        text.setText("");
-        text.clear();
+        text1.setText("");
+        text2.setText("");
+        text3.setText("");
+        text1.clear();
+        text2.clear();
+        text3.clear();
     }
 
     public void removeContact() {
